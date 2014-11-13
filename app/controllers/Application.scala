@@ -8,6 +8,9 @@ import play.api.libs.iteratee._
 import scala.concurrent.ExecutionContext.Implicits.global
 
 object Application extends Controller {
+	def version = Action {
+		Ok("""{"version"="1.0.0"}""")
+	}
 /*
 	def acceptLog(key:String, location:String) = Action { implicit request =>
 		println(s"key:$key, location:$location, request : " + request.body)

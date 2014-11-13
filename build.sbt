@@ -1,3 +1,5 @@
+import NativePackagerKeys._
+
 name := """logsrv"""
 
 version := "1.0-SNAPSHOT"
@@ -14,3 +16,5 @@ libraryDependencies ++= Seq(
   cache,
   ws
 )
+
+dockerExposedPorts in Docker := Seq(9000)
